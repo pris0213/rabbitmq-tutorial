@@ -1,0 +1,20 @@
+version: "3" # versão do docker-compose
+services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine 
+    environment:
+    - RABBITMQ_DEFAULT_USER=guest
+    - RABBITMQ_DEFAULT_PASS=guest
+    ports:
+    - 5672:5672 # porta do computador : porta do container # porta para comunicação entre os serviços
+    - 15672:15672 # painel
+    volumes:
+      - ./definitions.json:/etc/rabbitmq/definitions.json
+      - ./rabbitmq.config:/etc/rabbitmq/conf.d/10-defaults.conf
+    networks:
+      - poc
+
+networks:
+  poc:
+    driver: bridge 
+    
