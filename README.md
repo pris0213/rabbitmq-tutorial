@@ -28,7 +28,7 @@ RabbitMQ admin panel will be available on `localhost:15672`.
 
 ## 3. Producer
 
-Into the folder `ping/app/services`, we've created the file `publisher_service.rb`. There, you'll start a connection, create a channel and send a message through the exchange previously created on RabbitMQ's `deffinitions.json`.
+Into the folder `ping/app/services`, we've created the file [publisher_service.rb](/ping/app/services/publisher_service.rb). There, you'll start a connection, create a channel and send a message through the exchange previously created on RabbitMQ's `deffinitions.json`.
 
 Since we're using the Bunny gem to do this, you'll need to add it to your `Gemfile`:
 
@@ -47,7 +47,7 @@ $ docker-compose run web bundle exec rails c
 
 ## 4. Consumer
 
-In this case, you'll need to create a Worker that will check if there's any message in the queue. You'll find this on `pong/app/workers/pong_subscriber.rb`. This worker works with the gem Sneakers, so don't forget to add these to your `Gemfile`: 
+In this case, you'll need to create a Worker that will check if there's any message in the queue. You'll find this on [pong/app/workers/pong_subscriber.rb](/pong/app/workers/pong_subscriber.rb). This worker works with the gem Sneakers, so don't forget to add these to your `Gemfile`: 
 
 ```
 gem 'bunny', '~> 2.14', '>= 2.14.2'
@@ -66,7 +66,7 @@ $ docker-compose run web bundle exec rake sneakers:run
 
 ## 5. Shared Network
 
-We need to create a network so our services can communicate with each other. This info will be added to the `docker-compose.yml` file. RabbitMQ will be responsible to create the network, and the other services will access it. When running the services, remember to boot RabbitMQ first, since it'll create the network used by the other services. The network can also be manually created with the command:
+We need to create a network so our services can communicate with each other. This info will be added to all three `docker-compose.yml` files. RabbitMQ will be responsible to create the network, and the other services will access it. When running the services, remember to boot RabbitMQ first, since it'll create the network used by the other services. The network can also be manually created with the command:
 ```
 $ docker network create <network_name>
 ```
