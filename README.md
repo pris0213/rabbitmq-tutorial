@@ -1,4 +1,4 @@
-# RabbitMQ Tutorial in Ruby and Docker
+# RabbitMQ Tutorial with Ruby and Docker
 
 In this project, we've created three services:
 * Producer - Ping;
@@ -11,7 +11,7 @@ To configure your project with Docker and Ruby on Rails, follow [Docker's Quicks
 
 ## 2. RabbitMQ
 
-In this proejct, you'll only need to configure three files: 
+In this project, you'll only need to configure three files: 
 * `deffinitions.json`, where you can set user permissions, create queues, exchanges, etc.;
 * `docker-compose.yml`;
 * `rabbitmq.config`.

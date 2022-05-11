@@ -23,9 +23,9 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # RabbitMQ
-# para publicar 
+# for publishing
 gem 'bunny', '~> 2.14', '>= 2.14.2'
-# para escutar a fila
+# for listening to the queue
 gem 'sneakers'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
