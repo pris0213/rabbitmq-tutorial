@@ -16,8 +16,8 @@ services:
     depends_on:
       - db
     networks:
-      - poc-2
+      - poc
 networks:
-  poc-2:
+  poc:
     external:
-      name: rabbitmq_poc-2
+      name: rabbitmq_poc
