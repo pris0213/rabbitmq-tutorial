@@ -5,13 +5,9 @@ class PublisherService
     end
 
     def send(message)
-        exchange = channel.fanout("ping", durable: true)
+        exchange = @channel.fanout("ping", durable: true)
 
-        exchange.publish("teste".to_json, timestamp: Time.now.to_i)
-    end
-
-    def channel
-        @channel = connection.create_channel
+        exchange.publish(message.to_json, timestamp: Time.now.to_i)
     end
 
     def connection 

@@ -12,9 +12,9 @@ services:
       - ./definitions.json:/etc/rabbitmq/definitions.json
       - ./rabbitmq.config:/etc/rabbitmq/conf.d/10-defaults.conf
     networks:
-      - poc
+      - poc-2
 
 networks:
-  poc:
+  poc-2:
     driver: bridge 
     

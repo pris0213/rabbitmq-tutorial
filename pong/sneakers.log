@@ -1,0 +1,586 @@
+# Logfile created on 2022-05-10 19:53:51 +0000 by logger.rb/61378
+2022-05-10T19:54:11Z p-1 t-gre4uanyc WARN: Loading runner configuration...
+2022-05-10T19:54:11Z p-1 t-gre4uanyc DEBUG: New configuration: #<Sneakers::Configuration:0x00005602812c48e8 @hash={:error_reporters=>[#<Sneakers::ErrorReporter::DefaultLogger:0x000056028162b900>], :runner_config_file=>nil, :metrics=>nil, :daemonize=>false, :start_worker_delay=>0.2, :workers=>1, :log=>#<IO:<STDOUT>>, :pid_path=>"sneakers.pid", :amqp_heartbeat=>30, :prefetch=>10, :threads=>10, :share_threads=>false, :ack=>true, :hooks=>{}, :exchange=>"sneakers", :exchange_options=>{:type=>:direct, :durable=>true, :auto_delete=>false, :arguments=>{}}, :queue_options=>{:durable=>true, :auto_delete=>false, :exclusive=>false, :arguments=>{}}, :connection=>#<Bunny::Session:0x560280660868 guest@rabbitmq:5672, vhost=/, addresses=[rabbitmq:5672]>, :handler=>Sneakers::Handlers::Oneshot, :logger=>#<ServerEngine::DaemonLogger:0x00005602806276d0 @rotate_age=5, @rotate_size=1048576, @file_dev=#<Logger::LogDevice:0x0000560280626a50 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000560280626780>>, @level=0, @progname=nil, @default_formatter=#<Logger::Formatter:0x0000560280627180 @datetime_format=nil>, @formatter=Sneakers::Support::ProductionFormatter, @logdev=#<Logger::LogDevice:0x0000560280626a50 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000560280626780>>>, :log_level=>0, :worker_type=>"process", :worker_classes=>[PongSubscriber], :log_stdout=>false, :log_stderr=>false}>
+2022-05-10T19:54:11Z p-1 t-gre4uanyc WARN: Loading runner configuration...
+2022-05-10T19:54:11Z p-1 t-gre4uanyc DEBUG: New configuration: #<Sneakers::Configuration:0x000056028126b220 @hash={:error_reporters=>[#<Sneakers::ErrorReporter::DefaultLogger:0x000056028162b900>], :runner_config_file=>nil, :metrics=>nil, :daemonize=>false, :start_worker_delay=>0.2, :workers=>1, :log=>#<IO:<STDOUT>>, :pid_path=>"sneakers.pid", :amqp_heartbeat=>30, :prefetch=>10, :threads=>10, :share_threads=>false, :ack=>true, :hooks=>{}, :exchange=>"sneakers", :exchange_options=>{:type=>:direct, :durable=>true, :auto_delete=>false, :arguments=>{}}, :queue_options=>{:durable=>true, :auto_delete=>false, :exclusive=>false, :arguments=>{}}, :connection=>#<Bunny::Session:0x560280660868 guest@rabbitmq:5672, vhost=/, addresses=[rabbitmq:5672]>, :handler=>Sneakers::Handlers::Oneshot, :logger=>#<ServerEngine::DaemonLogger:0x00005602806276d0 @rotate_age=5, @rotate_size=1048576, @file_dev=#<Logger::LogDevice:0x0000560280626a50 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000560280626780>>, @level=0, @progname=nil, @default_formatter=#<Logger::Formatter:0x0000560280627180 @datetime_format=nil>, @formatter=Sneakers::Support::ProductionFormatter, @logdev=#<Logger::LogDevice:0x0000560280626a50 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000560280626780>>>, :log_level=>0, :worker_type=>"process", :worker_classes=>[PongSubscriber], :log_stdout=>false, :log_stderr=>false}>
+2022-05-10T19:54:11Z p-1 t-gre4uanyc WARN: Loading runner configuration...
+2022-05-10T19:54:11Z p-1 t-gre4uanyc DEBUG: New configuration: #<Sneakers::Configuration:0x0000560281242ac8 @hash={:error_reporters=>[#<Sneakers::ErrorReporter::DefaultLogger:0x000056028162b900>], :runner_config_file=>nil, :metrics=>nil, :daemonize=>false, :start_worker_delay=>0.2, :workers=>1, :log=>#<IO:<STDOUT>>, :pid_path=>"sneakers.pid", :amqp_heartbeat=>30, :prefetch=>10, :threads=>10, :share_threads=>false, :ack=>true, :hooks=>{}, :exchange=>"sneakers", :exchange_options=>{:type=>:direct, :durable=>true, :auto_delete=>false, :arguments=>{}}, :queue_options=>{:durable=>true, :auto_delete=>false, :exclusive=>false, :arguments=>{}}, :connection=>#<Bunny::Session:0x560280660868 guest@rabbitmq:5672, vhost=/, addresses=[rabbitmq:5672]>, :handler=>Sneakers::Handlers::Oneshot, :logger=>#<ServerEngine::DaemonLogger:0x00005602806276d0 @rotate_age=5, @rotate_size=1048576, @file_dev=#<Logger::LogDevice:0x0000560280626a50 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000560280626780>>, @level=0, @progname=nil, @default_formatter=#<Logger::Formatter:0x0000560280627180 @datetime_format=nil>, @formatter=Sneakers::Support::ProductionFormatter, @logdev=#<Logger::LogDevice:0x0000560280626a50 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000560280626780>>>, :log_level=>0, :worker_type=>"process", :worker_classes=>[PongSubscriber], :log_stdout=>false, :log_stderr=>false}>
+2022-05-10T19:54:11Z p-17 t-gre4uanyc DEBUG: [worker-ping,sent:1:577ctr][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028121c148>] New worker: subscribing.
+2022-05-10T19:54:11Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:11Z p-26 t-gre4uanyc DEBUG: [worker-ping,sent:1:kb51hv][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602811e77b8>] New worker: subscribing.
+2022-05-10T19:54:11Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:11Z p-35 t-gre4uanyc DEBUG: [worker-ping,sent:1:u8rj76][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602811e4838>] New worker: subscribing.
+2022-05-10T19:54:11Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:11Z p-44 t-gre4uanyc DEBUG: [worker-ping,sent:1:e4wzva][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560281197b28>] New worker: subscribing.
+2022-05-10T19:54:11Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:11Z p-53 t-gre4uanyc DEBUG: [worker-ping,sent:1:9dgcwd][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602811cebf0>] New worker: subscribing.
+2022-05-10T19:54:11Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:12Z p-62 t-gre4uanyc DEBUG: [worker-ping,sent:1:o56q6o][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560281185c48>] New worker: subscribing.
+2022-05-10T19:54:12Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:12Z p-71 t-gre4uanyc DEBUG: [worker-ping,sent:1:s35zhs][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602811b58f8>] New worker: subscribing.
+2022-05-10T19:54:12Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:12Z p-80 t-gre4uanyc DEBUG: [worker-ping,sent:1:5zj61u][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602811929c0>] New worker: subscribing.
+2022-05-10T19:54:12Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:12Z p-89 t-gre4uanyc DEBUG: [worker-ping,sent:1:fmbifb][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602811781b0>] New worker: subscribing.
+2022-05-10T19:54:12Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:12Z p-98 t-gre4uanyc DEBUG: [worker-ping,sent:1:imaror][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560281168850>] New worker: subscribing.
+2022-05-10T19:54:12Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:12Z p-107 t-gre4uanyc DEBUG: [worker-ping,sent:1:py0eb0][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560281147d08>] New worker: subscribing.
+2022-05-10T19:54:12Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:12Z p-116 t-gre4uanyc DEBUG: [worker-ping,sent:1:2di108][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560281132390>] New worker: subscribing.
+2022-05-10T19:54:12Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:12Z p-125 t-gre4uanyc DEBUG: [worker-ping,sent:1:bho2m][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028110dc20>] New worker: subscribing.
+2022-05-10T19:54:12Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:12Z p-134 t-gre4uanyc DEBUG: [worker-ping,sent:1:6iax6u][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602810e9988>] New worker: subscribing.
+2022-05-10T19:54:12Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:13Z p-143 t-gre4uanyc DEBUG: [worker-ping,sent:1:sn3mzu][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602810f82f8>] New worker: subscribing.
+2022-05-10T19:54:13Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:13Z p-152 t-gre4uanyc DEBUG: [worker-ping,sent:1:pmzbv2][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602810b5d90>] New worker: subscribing.
+2022-05-10T19:54:13Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:13Z p-161 t-gre4uanyc DEBUG: [worker-ping,sent:1:lk34c2][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602810738f0>] New worker: subscribing.
+2022-05-10T19:54:13Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:13Z p-170 t-gre4uanyc DEBUG: [worker-ping,sent:1:sxea6l][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028105e090>] New worker: subscribing.
+2022-05-10T19:54:13Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:13Z p-179 t-gre4uanyc DEBUG: [worker-ping,sent:1:nqirim][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028108c1c0>] New worker: subscribing.
+2022-05-10T19:54:13Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:13Z p-188 t-gre4uanyc DEBUG: [worker-ping,sent:1:82rlz2][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602808e2848>] New worker: subscribing.
+2022-05-10T19:54:13Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:13Z p-197 t-gre4uanyc DEBUG: [worker-ping,sent:1:ni423n][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602808c88d0>] New worker: subscribing.
+2022-05-10T19:54:13Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:13Z p-206 t-gre4uanyc DEBUG: [worker-ping,sent:1:pexfrt][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028083bb60>] New worker: subscribing.
+2022-05-10T19:54:13Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:13Z p-215 t-gre4uanyc DEBUG: [worker-ping,sent:1:tpfdky][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602808062a8>] New worker: subscribing.
+2022-05-10T19:54:13Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:14Z p-224 t-gre4uanyc DEBUG: [worker-ping,sent:1:u8w7ey][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602807a37e8>] New worker: subscribing.
+2022-05-10T19:54:14Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:14Z p-233 t-gre4uanyc DEBUG: [worker-ping,sent:1:pn063o][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560280978a28>] New worker: subscribing.
+2022-05-10T19:54:14Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:14Z p-242 t-gre4uanyc DEBUG: [worker-ping,sent:1:7svwc9][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560280a16110>] New worker: subscribing.
+2022-05-10T19:54:14Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:14Z p-251 t-gre4uanyc DEBUG: [worker-ping,sent:1:mkttko][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602809a1b58>] New worker: subscribing.
+2022-05-10T19:54:14Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:14Z p-260 t-gre4uanyc DEBUG: [worker-ping,sent:1:2fahx4][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560280993800>] New worker: subscribing.
+2022-05-10T19:54:14Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:14Z p-269 t-gre4uanyc DEBUG: [worker-ping,sent:1:g3w9k5][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560280a7b740>] New worker: subscribing.
+2022-05-10T19:54:14Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:14Z p-278 t-gre4uanyc DEBUG: [worker-ping,sent:1:5rtzqx][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560280955938>] New worker: subscribing.
+2022-05-10T19:54:14Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:14Z p-287 t-gre4uanyc DEBUG: [worker-ping,sent:1:vtwwf6][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056027f9e8748>] New worker: subscribing.
+2022-05-10T19:54:14Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:14Z p-296 t-gre4uanyc DEBUG: [worker-ping,sent:1:nbaty1][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560280876620>] New worker: subscribing.
+2022-05-10T19:54:14Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:14Z p-305 t-gre4uanyc DEBUG: [worker-ping,sent:1:qpq37z][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028086c238>] New worker: subscribing.
+2022-05-10T19:54:14Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:15Z p-314 t-gre4uanyc DEBUG: [worker-ping,sent:1:7w56uf][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602807dbe68>] New worker: subscribing.
+2022-05-10T19:54:15Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:15Z p-323 t-gre4uanyc DEBUG: [worker-ping,sent:1:mjqy2g][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056027f9dc0b0>] New worker: subscribing.
+2022-05-10T19:54:15Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:15Z p-332 t-gre4uanyc DEBUG: [worker-ping,sent:1:mal6ib][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602807f0188>] New worker: subscribing.
+2022-05-10T19:54:15Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:15Z p-341 t-gre4uanyc DEBUG: [worker-ping,sent:1:klo9eq][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028079ed10>] New worker: subscribing.
+2022-05-10T19:54:15Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:15Z p-350 t-gre4uanyc DEBUG: [worker-ping,sent:1:vydjqs][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028078b6e8>] New worker: subscribing.
+2022-05-10T19:54:15Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:15Z p-359 t-gre4uanyc DEBUG: [worker-ping,sent:1:4gwx7e][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028075c280>] New worker: subscribing.
+2022-05-10T19:54:15Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:15Z p-368 t-gre4uanyc DEBUG: [worker-ping,sent:1:b8iv1e][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560280742470>] New worker: subscribing.
+2022-05-10T19:54:15Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:15Z p-377 t-gre4uanyc DEBUG: [worker-ping,sent:1:cj0tmf][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602807229b8>] New worker: subscribing.
+2022-05-10T19:54:15Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:15Z p-386 t-gre4uanyc DEBUG: [worker-ping,sent:1:id96br][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602806fad28>] New worker: subscribing.
+2022-05-10T19:54:15Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:15Z p-395 t-gre4uanyc DEBUG: [worker-ping,sent:1:t4ddqu][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602806c34b8>] New worker: subscribing.
+2022-05-10T19:54:16Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:16Z p-404 t-gre4uanyc DEBUG: [worker-ping,sent:1:3hjco5][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560280697318>] New worker: subscribing.
+2022-05-10T19:54:16Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:16Z p-413 t-gre4uanyc DEBUG: [worker-ping,sent:1:wl5223][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560280662d20>] New worker: subscribing.
+2022-05-10T19:54:16Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:16Z p-422 t-gre4uanyc DEBUG: [worker-ping,sent:1:fnq3i5][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028063f050>] New worker: subscribing.
+2022-05-10T19:54:16Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:16Z p-431 t-gre4uanyc DEBUG: [worker-ping,sent:1:6u622s][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602805ef988>] New worker: subscribing.
+2022-05-10T19:54:16Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:16Z p-440 t-gre4uanyc DEBUG: [worker-ping,sent:1:qwcocv][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602805ace30>] New worker: subscribing.
+2022-05-10T19:54:16Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:16Z p-449 t-gre4uanyc DEBUG: [worker-ping,sent:1:ww3klq][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560280175ba0>] New worker: subscribing.
+2022-05-10T19:54:16Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:16Z p-458 t-gre4uanyc DEBUG: [worker-ping,sent:1:s19r12][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602800f1670>] New worker: subscribing.
+2022-05-10T19:54:16Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:16Z p-467 t-gre4uanyc DEBUG: [worker-ping,sent:1:j6s3hx][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028006d0c8>] New worker: subscribing.
+2022-05-10T19:54:16Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:17Z p-476 t-gre4uanyc DEBUG: [worker-ping,sent:1:tjqz2f][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056027ffcabe8>] New worker: subscribing.
+2022-05-10T19:54:17Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:17Z p-485 t-gre4uanyc DEBUG: [worker-ping,sent:1:bvkbb7][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056027ff7bef8>] New worker: subscribing.
+2022-05-10T19:54:17Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:17Z p-494 t-gre4uanyc DEBUG: [worker-ping,sent:1:ofrwwi][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056027fe051c8>] New worker: subscribing.
+2022-05-10T19:54:17Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:17Z p-503 t-gre4uanyc DEBUG: [worker-ping,sent:1:dpdmnb][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056027f9d3118>] New worker: subscribing.
+2022-05-10T19:54:17Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:17Z p-512 t-gre4uanyc DEBUG: [worker-ping,sent:1:owqeai][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056027f66cbc8>] New worker: subscribing.
+2022-05-10T19:54:17Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:17Z p-521 t-gre4uanyc DEBUG: [worker-ping,sent:1:qtlqhl][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056027f0c56c0>] New worker: subscribing.
+2022-05-10T19:54:17Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:17Z p-530 t-gre4uanyc DEBUG: [worker-ping,sent:1:s07cff][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560280a45f78>] New worker: subscribing.
+2022-05-10T19:54:17Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:17Z p-539 t-gre4uanyc DEBUG: [worker-ping,sent:1:k46yf1][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560280a32888>] New worker: subscribing.
+2022-05-10T19:54:17Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:17Z p-548 t-gre4uanyc DEBUG: [worker-ping,sent:1:i1ki8f][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560280a30218>] New worker: subscribing.
+2022-05-10T19:54:17Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:18Z p-557 t-gre4uanyc DEBUG: [worker-ping,sent:1:glusy3][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028261d2f0>] New worker: subscribing.
+2022-05-10T19:54:18Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:18Z p-566 t-gre4uanyc DEBUG: [worker-ping,sent:1:kfuw59][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028260cc48>] New worker: subscribing.
+2022-05-10T19:54:18Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:18Z p-575 t-gre4uanyc DEBUG: [worker-ping,sent:1:t5zm5y][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282602428>] New worker: subscribing.
+2022-05-10T19:54:18Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:18Z p-584 t-gre4uanyc DEBUG: [worker-ping,sent:1:gch11f][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282600308>] New worker: subscribing.
+2022-05-10T19:54:18Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:18Z p-593 t-gre4uanyc DEBUG: [worker-ping,sent:1:p32yhw][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602825f6150>] New worker: subscribing.
+2022-05-10T19:54:18Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:18Z p-602 t-gre4uanyc DEBUG: [worker-ping,sent:1:t2otj4][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602825dfdb0>] New worker: subscribing.
+2022-05-10T19:54:18Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:18Z p-611 t-gre4uanyc DEBUG: [worker-ping,sent:1:t4mekk][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602825dc660>] New worker: subscribing.
+2022-05-10T19:54:18Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:18Z p-620 t-gre4uanyc DEBUG: [worker-ping,sent:1:phdnle][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602825da338>] New worker: subscribing.
+2022-05-10T19:54:18Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:18Z p-629 t-gre4uanyc DEBUG: [worker-ping,sent:1:goq5qj][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602825d8290>] New worker: subscribing.
+2022-05-10T19:54:18Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:19Z p-638 t-gre4uanyc DEBUG: [worker-ping,sent:1:jjb3lg][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602825c9a10>] New worker: subscribing.
+2022-05-10T19:54:19Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:19Z p-647 t-gre4uanyc DEBUG: [worker-ping,sent:1:8joxo][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602825baf10>] New worker: subscribing.
+2022-05-10T19:54:19Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:19Z p-656 t-gre4uanyc DEBUG: [worker-ping,sent:1:dqm7bz][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602825b8bc0>] New worker: subscribing.
+2022-05-10T19:54:19Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:19Z p-665 t-gre4uanyc DEBUG: [worker-ping,sent:1:xzkv39][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602825ae148>] New worker: subscribing.
+2022-05-10T19:54:19Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:19Z p-674 t-gre4uanyc DEBUG: [worker-ping,sent:1:270685][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028259f788>] New worker: subscribing.
+2022-05-10T19:54:19Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:19Z p-683 t-gre4uanyc DEBUG: [worker-ping,sent:1:93cw5o][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028259d1b8>] New worker: subscribing.
+2022-05-10T19:54:19Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:19Z p-692 t-gre4uanyc DEBUG: [worker-ping,sent:1:cw2ru6][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028258d510>] New worker: subscribing.
+2022-05-10T19:54:19Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:19Z p-701 t-gre4uanyc DEBUG: [worker-ping,sent:1:8ix93][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282583358>] New worker: subscribing.
+2022-05-10T19:54:19Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:19Z p-710 t-gre4uanyc DEBUG: [worker-ping,sent:1:iye0z1][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602825808d8>] New worker: subscribing.
+2022-05-10T19:54:19Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:19Z p-719 t-gre4uanyc DEBUG: [worker-ping,sent:1:ofvfok][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028256a830>] New worker: subscribing.
+2022-05-10T19:54:19Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:20Z p-728 t-gre4uanyc DEBUG: [worker-ping,sent:1:mczdo6][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282562e00>] New worker: subscribing.
+2022-05-10T19:54:20Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:20Z p-737 t-gre4uanyc DEBUG: [worker-ping,sent:1:8iw6cm][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282560718>] New worker: subscribing.
+2022-05-10T19:54:20Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:20Z p-746 t-gre4uanyc DEBUG: [worker-ping,sent:1:s4edkb][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028254dc30>] New worker: subscribing.
+2022-05-10T19:54:20Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:20Z p-755 t-gre4uanyc DEBUG: [worker-ping,sent:1:vfk68v][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028253f108>] New worker: subscribing.
+2022-05-10T19:54:20Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:20Z p-764 t-gre4uanyc DEBUG: [worker-ping,sent:1:k45zun][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028253c8b8>] New worker: subscribing.
+2022-05-10T19:54:20Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:20Z p-773 t-gre4uanyc DEBUG: [worker-ping,sent:1:169fo5][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282535e00>] New worker: subscribing.
+2022-05-10T19:54:20Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:20Z p-782 t-gre4uanyc DEBUG: [worker-ping,sent:1:wjq5ze][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282527d28>] New worker: subscribing.
+2022-05-10T19:54:20Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:20Z p-791 t-gre4uanyc DEBUG: [worker-ping,sent:1:cmm8ur][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282525578>] New worker: subscribing.
+2022-05-10T19:54:20Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:20Z p-800 t-gre4uanyc DEBUG: [worker-ping,sent:1:8tzhnu][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282516c58>] New worker: subscribing.
+2022-05-10T19:54:20Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:20Z p-809 t-gre4uanyc DEBUG: [worker-ping,sent:1:tak0w8][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602825148e0>] New worker: subscribing.
+2022-05-10T19:54:20Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:21Z p-818 t-gre4uanyc DEBUG: [worker-ping,sent:1:3yfgwn][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282506290>] New worker: subscribing.
+2022-05-10T19:54:21Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:21Z p-827 t-gre4uanyc DEBUG: [worker-ping,sent:1:tzhwcq][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282503f18>] New worker: subscribing.
+2022-05-10T19:54:21Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:21Z p-836 t-gre4uanyc DEBUG: [worker-ping,sent:1:zz78rw][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282501998>] New worker: subscribing.
+2022-05-10T19:54:21Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:21Z p-845 t-gre4uanyc DEBUG: [worker-ping,sent:1:l5z4up][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602824f34b0>] New worker: subscribing.
+2022-05-10T19:54:21Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:21Z p-854 t-gre4uanyc DEBUG: [worker-ping,sent:1:czlsxg][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602824f0788>] New worker: subscribing.
+2022-05-10T19:54:21Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:21Z p-863 t-gre4uanyc DEBUG: [worker-ping,sent:1:rykhds][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602824da258>] New worker: subscribing.
+2022-05-10T19:54:21Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:21Z p-872 t-gre4uanyc DEBUG: [worker-ping,sent:1:nrwr4e][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602824cb618>] New worker: subscribing.
+2022-05-10T19:54:21Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:21Z p-881 t-gre4uanyc DEBUG: [worker-ping,sent:1:v6hnxg][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602824c8bc0>] New worker: subscribing.
+2022-05-10T19:54:21Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:21Z p-890 t-gre4uanyc DEBUG: [worker-ping,sent:1:kz4dso][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602824bdf18>] New worker: subscribing.
+2022-05-10T19:54:21Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:22Z p-899 t-gre4uanyc DEBUG: [worker-ping,sent:1:r2jdb7][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602824af170>] New worker: subscribing.
+2022-05-10T19:54:22Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:22Z p-908 t-gre4uanyc DEBUG: [worker-ping,sent:1:whjb26][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602824ac858>] New worker: subscribing.
+2022-05-10T19:54:22Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:22Z p-917 t-gre4uanyc DEBUG: [worker-ping,sent:1:61qve5][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602824aa008>] New worker: subscribing.
+2022-05-10T19:54:22Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:22Z p-926 t-gre4uanyc DEBUG: [worker-ping,sent:1:k2ysbi][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282496b70>] New worker: subscribing.
+2022-05-10T19:54:22Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:22Z p-935 t-gre4uanyc DEBUG: [worker-ping,sent:1:ujumny][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028247bb68>] New worker: subscribing.
+2022-05-10T19:54:22Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:22Z p-944 t-gre4uanyc DEBUG: [worker-ping,sent:1:11d5rn][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282479368>] New worker: subscribing.
+2022-05-10T19:54:22Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:22Z p-953 t-gre4uanyc DEBUG: [worker-ping,sent:1:6mmzsi][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602824766b8>] New worker: subscribing.
+2022-05-10T19:54:22Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:22Z p-962 t-gre4uanyc DEBUG: [worker-ping,sent:1:25vwx5][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282473df0>] New worker: subscribing.
+2022-05-10T19:54:22Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:22Z p-971 t-gre4uanyc DEBUG: [worker-ping,sent:1:s1hoap][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282471438>] New worker: subscribing.
+2022-05-10T19:54:22Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:22Z p-980 t-gre4uanyc DEBUG: [worker-ping,sent:1:akl9n9][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602824662b8>] New worker: subscribing.
+2022-05-10T19:54:22Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:23Z p-989 t-gre4uanyc DEBUG: [worker-ping,sent:1:ryu6mh][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282453bb8>] New worker: subscribing.
+2022-05-10T19:54:23Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:23Z p-998 t-gre4uanyc DEBUG: [worker-ping,sent:1:r2b0wu][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602824503f0>] New worker: subscribing.
+2022-05-10T19:54:23Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:23Z p-1007 t-gre4uanyc DEBUG: [worker-ping,sent:1:sa9vsv][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282441da0>] New worker: subscribing.
+2022-05-10T19:54:23Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:23Z p-1016 t-gre4uanyc DEBUG: [worker-ping,sent:1:3esmh6][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282436b30>] New worker: subscribing.
+2022-05-10T19:54:23Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:23Z p-1025 t-gre4uanyc DEBUG: [worker-ping,sent:1:er3srk][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602824343f8>] New worker: subscribing.
+2022-05-10T19:54:23Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:23Z p-1034 t-gre4uanyc DEBUG: [worker-ping,sent:1:mdv6th][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602823ba918>] New worker: subscribing.
+2022-05-10T19:54:23Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:23Z p-1043 t-gre4uanyc DEBUG: [worker-ping,sent:1:rm3hpj][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028239bc98>] New worker: subscribing.
+2022-05-10T19:54:23Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:23Z p-1052 t-gre4uanyc DEBUG: [worker-ping,sent:1:m7uvm8][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602823998d0>] New worker: subscribing.
+2022-05-10T19:54:23Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:23Z p-1061 t-gre4uanyc DEBUG: [worker-ping,sent:1:t72iaj][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282395ed8>] New worker: subscribing.
+2022-05-10T19:54:23Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:23Z p-1070 t-gre4uanyc DEBUG: [worker-ping,sent:1:2u64x2][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602824253a8>] New worker: subscribing.
+2022-05-10T19:54:23Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:24Z p-1079 t-gre4uanyc DEBUG: [worker-ping,sent:1:gnf7g1][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282406048>] New worker: subscribing.
+2022-05-10T19:54:24Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:24Z p-1088 t-gre4uanyc DEBUG: [worker-ping,sent:1:sfrk6a][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602823ea5a0>] New worker: subscribing.
+2022-05-10T19:54:24Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:24Z p-1097 t-gre4uanyc DEBUG: [worker-ping,sent:1:maorxa][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602823d6be0>] New worker: subscribing.
+2022-05-10T19:54:24Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:24Z p-1106 t-gre4uanyc DEBUG: [worker-ping,sent:1:iai6r2][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602823cfa48>] New worker: subscribing.
+2022-05-10T19:54:24Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:24Z p-1115 t-gre4uanyc DEBUG: [worker-ping,sent:1:xmimj8][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602823cd4c8>] New worker: subscribing.
+2022-05-10T19:54:24Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:24Z p-1124 t-gre4uanyc DEBUG: [worker-ping,sent:1:wu4lnv][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602823af0e0>] New worker: subscribing.
+2022-05-10T19:54:24Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:24Z p-1133 t-gre4uanyc DEBUG: [worker-ping,sent:1:qnjepc][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602823ac818>] New worker: subscribing.
+2022-05-10T19:54:24Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:24Z p-1142 t-gre4uanyc DEBUG: [worker-ping,sent:1:dwg8ro][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602823aa590>] New worker: subscribing.
+2022-05-10T19:54:24Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:24Z p-1151 t-gre4uanyc DEBUG: [worker-ping,sent:1:m7ab6b][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602823a8218>] New worker: subscribing.
+2022-05-10T19:54:24Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:25Z p-1160 t-gre4uanyc DEBUG: [worker-ping,sent:1:nfopcy][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602823a5a40>] New worker: subscribing.
+2022-05-10T19:54:25Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:25Z p-1169 t-gre4uanyc DEBUG: [worker-ping,sent:1:6tj2di][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282393b60>] New worker: subscribing.
+2022-05-10T19:54:25Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:25Z p-1178 t-gre4uanyc DEBUG: [worker-ping,sent:1:q6d7y2][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282391068>] New worker: subscribing.
+2022-05-10T19:54:25Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:25Z p-1187 t-gre4uanyc DEBUG: [worker-ping,sent:1:dxwp9j][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282386fa0>] New worker: subscribing.
+2022-05-10T19:54:25Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:25Z p-1196 t-gre4uanyc DEBUG: [worker-ping,sent:1:ifjh8s][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282384598>] New worker: subscribing.
+2022-05-10T19:54:25Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:25Z p-1205 t-gre4uanyc DEBUG: [worker-ping,sent:1:gxty7q][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282375b10>] New worker: subscribing.
+2022-05-10T19:54:25Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:25Z p-1214 t-gre4uanyc DEBUG: [worker-ping,sent:1:w3luv][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282367060>] New worker: subscribing.
+2022-05-10T19:54:25Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:25Z p-1223 t-gre4uanyc DEBUG: [worker-ping,sent:1:pkqmjq][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282364068>] New worker: subscribing.
+2022-05-10T19:54:25Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:25Z p-1232 t-gre4uanyc DEBUG: [worker-ping,sent:1:rhr29s][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602823557e8>] New worker: subscribing.
+2022-05-10T19:54:25Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:26Z p-1241 t-gre4uanyc DEBUG: [worker-ping,sent:1:ugs9kc][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028234a8c0>] New worker: subscribing.
+2022-05-10T19:54:26Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:26Z p-1250 t-gre4uanyc DEBUG: [worker-ping,sent:1:tp7pqs][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282348340>] New worker: subscribing.
+2022-05-10T19:54:26Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:26Z p-1259 t-gre4uanyc DEBUG: [worker-ping,sent:1:ftqi6v][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028233ddf0>] New worker: subscribing.
+2022-05-10T19:54:26Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:26Z p-1268 t-gre4uanyc DEBUG: [worker-ping,sent:1:4b31s7][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282333968>] New worker: subscribing.
+2022-05-10T19:54:26Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:26Z p-1277 t-gre4uanyc DEBUG: [worker-ping,sent:1:a7bnyy][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282330240>] New worker: subscribing.
+2022-05-10T19:54:26Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:26Z p-1286 t-gre4uanyc DEBUG: [worker-ping,sent:1:igtetr][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602822fd1d8>] New worker: subscribing.
+2022-05-10T19:54:26Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:26Z p-1295 t-gre4uanyc DEBUG: [worker-ping,sent:1:6zhvp9][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282309bb8>] New worker: subscribing.
+2022-05-10T19:54:26Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:26Z p-1304 t-gre4uanyc DEBUG: [worker-ping,sent:1:c441mu][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602822f3ae8>] New worker: subscribing.
+2022-05-10T19:54:26Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:26Z p-1313 t-gre4uanyc DEBUG: [worker-ping,sent:1:s9e6pq][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602822f1860>] New worker: subscribing.
+2022-05-10T19:54:26Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:27Z p-1322 t-gre4uanyc DEBUG: [worker-ping,sent:1:m9i73e][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602822e5380>] New worker: subscribing.
+2022-05-10T19:54:27Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:27Z p-1331 t-gre4uanyc DEBUG: [worker-ping,sent:1:b7a1tr][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602822c18b8>] New worker: subscribing.
+2022-05-10T19:54:27Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:27Z p-1340 t-gre4uanyc DEBUG: [worker-ping,sent:1:l6800c][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602822b3588>] New worker: subscribing.
+2022-05-10T19:54:27Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:27Z p-1349 t-gre4uanyc DEBUG: [worker-ping,sent:1:pv4c96][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602822b0f90>] New worker: subscribing.
+2022-05-10T19:54:27Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:27Z p-1358 t-gre4uanyc DEBUG: [worker-ping,sent:1:tu5dx9][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282283ce8>] New worker: subscribing.
+2022-05-10T19:54:27Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:27Z p-1367 t-gre4uanyc DEBUG: [worker-ping,sent:1:s3f5cm][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282280520>] New worker: subscribing.
+2022-05-10T19:54:27Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:27Z p-1376 t-gre4uanyc DEBUG: [worker-ping,sent:1:jd1iw2][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282247ec8>] New worker: subscribing.
+2022-05-10T19:54:27Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:27Z p-1385 t-gre4uanyc DEBUG: [worker-ping,sent:1:98usy6][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602822456a0>] New worker: subscribing.
+2022-05-10T19:54:27Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:27Z p-1394 t-gre4uanyc DEBUG: [worker-ping,sent:1:el0dp5][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028226e820>] New worker: subscribing.
+2022-05-10T19:54:27Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:28Z p-1403 t-gre4uanyc DEBUG: [worker-ping,sent:1:v61jst][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282257c10>] New worker: subscribing.
+2022-05-10T19:54:28Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:28Z p-1412 t-gre4uanyc DEBUG: [worker-ping,sent:1:98evup][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602822540d8>] New worker: subscribing.
+2022-05-10T19:54:28Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:28Z p-1421 t-gre4uanyc DEBUG: [worker-ping,sent:1:njezkc][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282241ca8>] New worker: subscribing.
+2022-05-10T19:54:28Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:28Z p-1430 t-gre4uanyc DEBUG: [worker-ping,sent:1:wf5pq8][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028221fa68>] New worker: subscribing.
+2022-05-10T19:54:28Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:28Z p-1439 t-gre4uanyc DEBUG: [worker-ping,sent:1:m90f8x][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028221d790>] New worker: subscribing.
+2022-05-10T19:54:28Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:28Z p-1448 t-gre4uanyc DEBUG: [worker-ping,sent:1:y4g17j][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028221b440>] New worker: subscribing.
+2022-05-10T19:54:28Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:28Z p-1457 t-gre4uanyc DEBUG: [worker-ping,sent:1:a38xx4][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282218358>] New worker: subscribing.
+2022-05-10T19:54:28Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:28Z p-1466 t-gre4uanyc DEBUG: [worker-ping,sent:1:alvwe3][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282215e50>] New worker: subscribing.
+2022-05-10T19:54:28Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:28Z p-1475 t-gre4uanyc DEBUG: [worker-ping,sent:1:abvx5o][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282201b58>] New worker: subscribing.
+2022-05-10T19:54:28Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:29Z p-1484 t-gre4uanyc DEBUG: [worker-ping,sent:1:1nm0zm][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602821f7a18>] New worker: subscribing.
+2022-05-10T19:54:29Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:29Z p-1493 t-gre4uanyc DEBUG: [worker-ping,sent:1:f7qnas][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602821f5b78>] New worker: subscribing.
+2022-05-10T19:54:29Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:29Z p-1502 t-gre4uanyc DEBUG: [worker-ping,sent:1:51e30e][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602821ea7f0>] New worker: subscribing.
+2022-05-10T19:54:29Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:29Z p-1511 t-gre4uanyc DEBUG: [worker-ping,sent:1:ykft71][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602821df8c8>] New worker: subscribing.
+2022-05-10T19:54:29Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:29Z p-1520 t-gre4uanyc DEBUG: [worker-ping,sent:1:9834kt][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602821dc150>] New worker: subscribing.
+2022-05-10T19:54:29Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:29Z p-1529 t-gre4uanyc DEBUG: [worker-ping,sent:1:75isre][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602821d1ac0>] New worker: subscribing.
+2022-05-10T19:54:29Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:29Z p-1538 t-gre4uanyc DEBUG: [worker-ping,sent:1:4kz1es][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602821c6d00>] New worker: subscribing.
+2022-05-10T19:54:29Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:29Z p-1547 t-gre4uanyc DEBUG: [worker-ping,sent:1:6yefa6][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602821c4618>] New worker: subscribing.
+2022-05-10T19:54:29Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:29Z p-1556 t-gre4uanyc DEBUG: [worker-ping,sent:1:88bn7i][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602821b2008>] New worker: subscribing.
+2022-05-10T19:54:29Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:29Z p-1565 t-gre4uanyc DEBUG: [worker-ping,sent:1:o23sue][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028219f368>] New worker: subscribing.
+2022-05-10T19:54:29Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:30Z p-1574 t-gre4uanyc DEBUG: [worker-ping,sent:1:ckchjl][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028219cd98>] New worker: subscribing.
+2022-05-10T19:54:30Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:30Z p-1583 t-gre4uanyc DEBUG: [worker-ping,sent:1:w1mztq][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282192a78>] New worker: subscribing.
+2022-05-10T19:54:30Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:30Z p-1592 t-gre4uanyc DEBUG: [worker-ping,sent:1:hnfrfz][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282190318>] New worker: subscribing.
+2022-05-10T19:54:30Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:30Z p-1601 t-gre4uanyc DEBUG: [worker-ping,sent:1:c2pt0d][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028217d718>] New worker: subscribing.
+2022-05-10T19:54:30Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:30Z p-1610 t-gre4uanyc DEBUG: [worker-ping,sent:1:1ak8v5][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282172ed0>] New worker: subscribing.
+2022-05-10T19:54:30Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:30Z p-1619 t-gre4uanyc DEBUG: [worker-ping,sent:1:m7r0j6][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282163e08>] New worker: subscribing.
+2022-05-10T19:54:30Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:30Z p-1628 t-gre4uanyc DEBUG: [worker-ping,sent:1:62urlm][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x00005602821604b0>] New worker: subscribing.
+2022-05-10T19:54:30Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:30Z p-1637 t-gre4uanyc DEBUG: [worker-ping,sent:1:nlly7f][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x000056028214c8c0>] New worker: subscribing.
+2022-05-10T19:54:30Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:54:30Z p-1 t-gre55xqbs INFO: Received graceful stop
+2022-05-10T19:54:30Z p-1647 t-gre4uanyc DEBUG: [worker-ping,sent:1:o26s6d][#<Thread:0x000056027ecd4b88 run>][ping,sent][#<Sneakers::Configuration:0x0000560282146a60>] New worker: subscribing.
+2022-05-10T19:54:30Z p-1 t-gre4uanyc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:09Z p-1 t-gnuy6hosc WARN: Loading runner configuration...
+2022-05-10T19:55:09Z p-1 t-gnuy6hosc DEBUG: New configuration: #<Sneakers::Configuration:0x0000558196f8d398 @hash={:error_reporters=>[#<Sneakers::ErrorReporter::DefaultLogger:0x000055819553b378>], :runner_config_file=>nil, :metrics=>nil, :daemonize=>false, :start_worker_delay=>0.2, :workers=>1, :log=>#<IO:<STDOUT>>, :pid_path=>"sneakers.pid", :amqp_heartbeat=>30, :prefetch=>10, :threads=>10, :share_threads=>false, :ack=>true, :hooks=>{}, :exchange=>"sneakers", :exchange_options=>{:type=>:direct, :durable=>true, :auto_delete=>false, :arguments=>{}}, :queue_options=>{:durable=>true, :auto_delete=>false, :exclusive=>false, :arguments=>{}}, :connection=>#<Bunny::Session:0x5581965b3ca0 guest@rabbitmq:5672, vhost=/, addresses=[rabbitmq:5672]>, :handler=>Sneakers::Handlers::Oneshot, :logger=>#<ServerEngine::DaemonLogger:0x0000558196586868 @rotate_age=5, @rotate_size=1048576, @file_dev=#<Logger::LogDevice:0x00005581965865c0 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000558196586548>>, @level=0, @progname=nil, @default_formatter=#<Logger::Formatter:0x0000558196586700 @datetime_format=nil>, @formatter=Sneakers::Support::ProductionFormatter, @logdev=#<Logger::LogDevice:0x00005581965865c0 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000558196586548>>>, :log_level=>0, :worker_type=>"process", :worker_classes=>[PongSubscriber], :log_stdout=>false, :log_stderr=>false}>
+2022-05-10T19:55:09Z p-1 t-gnuy6hosc WARN: Loading runner configuration...
+2022-05-10T19:55:09Z p-1 t-gnuy6hosc DEBUG: New configuration: #<Sneakers::Configuration:0x0000558196f97820 @hash={:error_reporters=>[#<Sneakers::ErrorReporter::DefaultLogger:0x000055819553b378>], :runner_config_file=>nil, :metrics=>nil, :daemonize=>false, :start_worker_delay=>0.2, :workers=>1, :log=>#<IO:<STDOUT>>, :pid_path=>"sneakers.pid", :amqp_heartbeat=>30, :prefetch=>10, :threads=>10, :share_threads=>false, :ack=>true, :hooks=>{}, :exchange=>"sneakers", :exchange_options=>{:type=>:direct, :durable=>true, :auto_delete=>false, :arguments=>{}}, :queue_options=>{:durable=>true, :auto_delete=>false, :exclusive=>false, :arguments=>{}}, :connection=>#<Bunny::Session:0x5581965b3ca0 guest@rabbitmq:5672, vhost=/, addresses=[rabbitmq:5672]>, :handler=>Sneakers::Handlers::Oneshot, :logger=>#<ServerEngine::DaemonLogger:0x0000558196586868 @rotate_age=5, @rotate_size=1048576, @file_dev=#<Logger::LogDevice:0x00005581965865c0 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000558196586548>>, @level=0, @progname=nil, @default_formatter=#<Logger::Formatter:0x0000558196586700 @datetime_format=nil>, @formatter=Sneakers::Support::ProductionFormatter, @logdev=#<Logger::LogDevice:0x00005581965865c0 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000558196586548>>>, :log_level=>0, :worker_type=>"process", :worker_classes=>[PongSubscriber], :log_stdout=>false, :log_stderr=>false}>
+2022-05-10T19:55:09Z p-1 t-gnuy6hosc WARN: Loading runner configuration...
+2022-05-10T19:55:09Z p-1 t-gnuy6hosc DEBUG: New configuration: #<Sneakers::Configuration:0x000055819669af38 @hash={:error_reporters=>[#<Sneakers::ErrorReporter::DefaultLogger:0x000055819553b378>], :runner_config_file=>nil, :metrics=>nil, :daemonize=>false, :start_worker_delay=>0.2, :workers=>1, :log=>#<IO:<STDOUT>>, :pid_path=>"sneakers.pid", :amqp_heartbeat=>30, :prefetch=>10, :threads=>10, :share_threads=>false, :ack=>true, :hooks=>{}, :exchange=>"sneakers", :exchange_options=>{:type=>:direct, :durable=>true, :auto_delete=>false, :arguments=>{}}, :queue_options=>{:durable=>true, :auto_delete=>false, :exclusive=>false, :arguments=>{}}, :connection=>#<Bunny::Session:0x5581965b3ca0 guest@rabbitmq:5672, vhost=/, addresses=[rabbitmq:5672]>, :handler=>Sneakers::Handlers::Oneshot, :logger=>#<ServerEngine::DaemonLogger:0x0000558196586868 @rotate_age=5, @rotate_size=1048576, @file_dev=#<Logger::LogDevice:0x00005581965865c0 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000558196586548>>, @level=0, @progname=nil, @default_formatter=#<Logger::Formatter:0x0000558196586700 @datetime_format=nil>, @formatter=Sneakers::Support::ProductionFormatter, @logdev=#<Logger::LogDevice:0x00005581965865c0 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000558196586548>>>, :log_level=>0, :worker_type=>"process", :worker_classes=>[PongSubscriber], :log_stdout=>false, :log_stderr=>false}>
+2022-05-10T19:55:09Z p-17 t-gnuy6hosc DEBUG: [worker-ping.sent:1:wxse23][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196fa0a60>] New worker: subscribing.
+2022-05-10T19:55:09Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:09Z p-26 t-gnuy6hosc DEBUG: [worker-ping.sent:1:iggaoz][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x000055819668c0c8>] New worker: subscribing.
+2022-05-10T19:55:09Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:09Z p-35 t-gnuy6hosc DEBUG: [worker-ping.sent:1:luqx1i][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196fb21e8>] New worker: subscribing.
+2022-05-10T19:55:09Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:09Z p-44 t-gnuy6hosc DEBUG: [worker-ping.sent:1:o8oak2][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196fb03e8>] New worker: subscribing.
+2022-05-10T19:55:09Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:09Z p-53 t-gnuy6hosc DEBUG: [worker-ping.sent:1:7csurm][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196fbef88>] New worker: subscribing.
+2022-05-10T19:55:09Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:10Z p-62 t-gnuy6hosc DEBUG: [worker-ping.sent:1:u6zhq][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196fbd160>] New worker: subscribing.
+2022-05-10T19:55:10Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:10Z p-71 t-gnuy6hosc DEBUG: [worker-ping.sent:1:pzmlif][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x000055819666a1d0>] New worker: subscribing.
+2022-05-10T19:55:10Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:10Z p-80 t-gnuy6hosc DEBUG: [worker-ping.sent:1:nevt24][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196fc7098>] New worker: subscribing.
+2022-05-10T19:55:10Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:10Z p-89 t-gnuy6hosc DEBUG: [worker-ping.sent:1:q4a6g3][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196fc52c0>] New worker: subscribing.
+2022-05-10T19:55:10Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:10Z p-98 t-gnuy6hosc DEBUG: [worker-ping.sent:1:mvbha7][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196662278>] New worker: subscribing.
+2022-05-10T19:55:10Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:10Z p-107 t-gnuy6hosc DEBUG: [worker-ping.sent:1:qf70gm][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196fd2df8>] New worker: subscribing.
+2022-05-10T19:55:10Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:10Z p-116 t-gnuy6hosc DEBUG: [worker-ping.sent:1:4zwzrz][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196fd0ff8>] New worker: subscribing.
+2022-05-10T19:55:10Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:10Z p-125 t-gnuy6hosc DEBUG: [worker-ping.sent:1:v9c9zj][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x00005581966520f8>] New worker: subscribing.
+2022-05-10T19:55:10Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:11Z p-134 t-gnuy6hosc DEBUG: [worker-ping.sent:1:zvwoo7][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196fdf328>] New worker: subscribing.
+2022-05-10T19:55:11Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:11Z p-143 t-gnuy6hosc DEBUG: [worker-ping.sent:1:cajp6z][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196fdd550>] New worker: subscribing.
+2022-05-10T19:55:11Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:11Z p-152 t-gnuy6hosc DEBUG: [worker-ping.sent:1:2czds4][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x000055819664ef20>] New worker: subscribing.
+2022-05-10T19:55:11Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:11Z p-161 t-gnuy6hosc DEBUG: [worker-ping.sent:1:2snih9][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196feade0>] New worker: subscribing.
+2022-05-10T19:55:11Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:11Z p-170 t-gnuy6hosc DEBUG: [worker-ping.sent:1:fnmw8h][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196fe8fe0>] New worker: subscribing.
+2022-05-10T19:55:11Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:11Z p-179 t-gnuy6hosc DEBUG: [worker-ping.sent:1:5vhzks][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196ff79f0>] New worker: subscribing.
+2022-05-10T19:55:11Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:11Z p-188 t-gnuy6hosc DEBUG: [worker-ping.sent:1:vatubn][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196ff1be0>] New worker: subscribing.
+2022-05-10T19:55:11Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:11Z p-197 t-gnuy6hosc DEBUG: [worker-ping.sent:1:84eiup][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x00005581966333d8>] New worker: subscribing.
+2022-05-10T19:55:11Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:11Z p-206 t-gnuy6hosc DEBUG: [worker-ping.sent:1:mhfky0][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196fff2b8>] New worker: subscribing.
+2022-05-10T19:55:11Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:11Z p-215 t-gnuy6hosc DEBUG: [worker-ping.sent:1:10os9g][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196ffd4e0>] New worker: subscribing.
+2022-05-10T19:55:11Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:55:11Z p-1 t-gnuyp9rqk INFO: Received graceful stop
+2022-05-10T19:55:12Z p-225 t-gnuy6hosc DEBUG: [worker-ping.sent:1:y2wcy][#<Thread:0x0000558193378b78 run>][ping.sent][#<Sneakers::Configuration:0x0000558196622380>] New worker: subscribing.
+2022-05-10T19:55:12Z p-1 t-gnuy6hosc INFO: Worker 0 finished unexpectedly with status 1
+2022-05-10T19:56:52Z p-1 t-gpz3pfjjs WARN: Loading runner configuration...
+2022-05-10T19:56:52Z p-1 t-gpz3pfjjs DEBUG: New configuration: #<Sneakers::Configuration:0x000055cec7e30198 @hash={:error_reporters=>[#<Sneakers::ErrorReporter::DefaultLogger:0x000055cec6e068f8>], :runner_config_file=>nil, :metrics=>nil, :daemonize=>false, :start_worker_delay=>0.2, :workers=>1, :log=>#<IO:<STDOUT>>, :pid_path=>"sneakers.pid", :amqp_heartbeat=>30, :prefetch=>10, :threads=>10, :share_threads=>false, :ack=>true, :hooks=>{}, :exchange=>"sneakers", :exchange_options=>{:type=>:direct, :durable=>true, :auto_delete=>false, :arguments=>{}}, :queue_options=>{:durable=>true, :auto_delete=>false, :exclusive=>false, :arguments=>{}}, :connection=>#<Bunny::Session:0x55cec724c8e0 guest@rabbitmq:5672, vhost=/, addresses=[rabbitmq:5672]>, :handler=>Sneakers::Handlers::Oneshot, :logger=>#<ServerEngine::DaemonLogger:0x000055cec722f1a0 @rotate_age=5, @rotate_size=1048576, @file_dev=#<Logger::LogDevice:0x000055cec722eb88 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x000055cec722eb38>>, @level=0, @progname=nil, @default_formatter=#<Logger::Formatter:0x000055cec722ee30 @datetime_format=nil>, @formatter=Sneakers::Support::ProductionFormatter, @logdev=#<Logger::LogDevice:0x000055cec722eb88 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x000055cec722eb38>>>, :log_level=>0, :worker_type=>"process", :worker_classes=>[PongSubscriber], :log_stdout=>false, :log_stderr=>false}>
+2022-05-10T19:56:52Z p-1 t-gpz3pfjjs WARN: Loading runner configuration...
+2022-05-10T19:56:52Z p-1 t-gpz3pfjjs DEBUG: New configuration: #<Sneakers::Configuration:0x000055cec7e0ad30 @hash={:error_reporters=>[#<Sneakers::ErrorReporter::DefaultLogger:0x000055cec6e068f8>], :runner_config_file=>nil, :metrics=>nil, :daemonize=>false, :start_worker_delay=>0.2, :workers=>1, :log=>#<IO:<STDOUT>>, :pid_path=>"sneakers.pid", :amqp_heartbeat=>30, :prefetch=>10, :threads=>10, :share_threads=>false, :ack=>true, :hooks=>{}, :exchange=>"sneakers", :exchange_options=>{:type=>:direct, :durable=>true, :auto_delete=>false, :arguments=>{}}, :queue_options=>{:durable=>true, :auto_delete=>false, :exclusive=>false, :arguments=>{}}, :connection=>#<Bunny::Session:0x55cec724c8e0 guest@rabbitmq:5672, vhost=/, addresses=[rabbitmq:5672]>, :handler=>Sneakers::Handlers::Oneshot, :logger=>#<ServerEngine::DaemonLogger:0x000055cec722f1a0 @rotate_age=5, @rotate_size=1048576, @file_dev=#<Logger::LogDevice:0x000055cec722eb88 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x000055cec722eb38>>, @level=0, @progname=nil, @default_formatter=#<Logger::Formatter:0x000055cec722ee30 @datetime_format=nil>, @formatter=Sneakers::Support::ProductionFormatter, @logdev=#<Logger::LogDevice:0x000055cec722eb88 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x000055cec722eb38>>>, :log_level=>0, :worker_type=>"process", :worker_classes=>[PongSubscriber], :log_stdout=>false, :log_stderr=>false}>
+2022-05-10T19:56:52Z p-1 t-gpz3pfjjs WARN: Loading runner configuration...
+2022-05-10T19:56:52Z p-1 t-gpz3pfjjs DEBUG: New configuration: #<Sneakers::Configuration:0x000055cec7e127d8 @hash={:error_reporters=>[#<Sneakers::ErrorReporter::DefaultLogger:0x000055cec6e068f8>], :runner_config_file=>nil, :metrics=>nil, :daemonize=>false, :start_worker_delay=>0.2, :workers=>1, :log=>#<IO:<STDOUT>>, :pid_path=>"sneakers.pid", :amqp_heartbeat=>30, :prefetch=>10, :threads=>10, :share_threads=>false, :ack=>true, :hooks=>{}, :exchange=>"sneakers", :exchange_options=>{:type=>:direct, :durable=>true, :auto_delete=>false, :arguments=>{}}, :queue_options=>{:durable=>true, :auto_delete=>false, :exclusive=>false, :arguments=>{}}, :connection=>#<Bunny::Session:0x55cec724c8e0 guest@rabbitmq:5672, vhost=/, addresses=[rabbitmq:5672]>, :handler=>Sneakers::Handlers::Oneshot, :logger=>#<ServerEngine::DaemonLogger:0x000055cec722f1a0 @rotate_age=5, @rotate_size=1048576, @file_dev=#<Logger::LogDevice:0x000055cec722eb88 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x000055cec722eb38>>, @level=0, @progname=nil, @default_formatter=#<Logger::Formatter:0x000055cec722ee30 @datetime_format=nil>, @formatter=Sneakers::Support::ProductionFormatter, @logdev=#<Logger::LogDevice:0x000055cec722eb88 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x000055cec722eb38>>>, :log_level=>0, :worker_type=>"process", :worker_classes=>[PongSubscriber], :log_stdout=>false, :log_stderr=>false}>
+2022-05-10T19:56:52Z p-18 t-gpz3pfjjs DEBUG: [worker-ping.sent:1:un6eii][#<Thread:0x000055cec47e4b70 run>][ping.sent][#<Sneakers::Configuration:0x000055cec7e03418>] New worker: subscribing.
+2022-05-10T19:56:52Z p-18 t-gpz3pfjjs DEBUG: [worker-ping.sent:1:un6eii][#<Thread:0x000055cec47e4b70 run>][ping.sent][#<Sneakers::Configuration:0x000055cec7e03418>] New worker: I'm alive.
+2022-05-10T19:57:22Z p-18 t-gpz3pfjjs DEBUG: Heartbeat: running threads [6]
+2022-05-10T19:57:52Z p-18 t-gpz3pfjjs DEBUG: Heartbeat: running threads [6]
+2022-05-10T19:58:04Z p-18 t-gpz4670js DEBUG: [worker-ping.sent:1:un6eii][#<Thread:0x000055cec7d98910@/usr/local/bundle/gems/bunny-2.19.0/lib/bunny/consumer_work_pool.rb:101 run>][ping.sent][#<Sneakers::Configuration:0x000055cec7e03418>] Working off: "\"foi??\""
+2022-05-10T19:58:20Z p-18 t-gpz4670js DEBUG: [worker-ping.sent:1:un6eii][#<Thread:0x000055cec7d98910@/usr/local/bundle/gems/bunny-2.19.0/lib/bunny/consumer_work_pool.rb:101 run>][ping.sent][#<Sneakers::Configuration:0x000055cec7e03418>] Working off: "\"*-*\""
+2022-05-10T19:58:22Z p-18 t-gpz3pfjjs DEBUG: Heartbeat: running threads [8]
+2022-05-10T19:58:52Z p-18 t-gpz3pfjjs DEBUG: Heartbeat: running threads [8]
+2022-05-10T19:59:22Z p-18 t-gpz3pfjjs DEBUG: Heartbeat: running threads [8]
+2022-05-10T19:59:52Z p-18 t-gpz3pfjjs DEBUG: Heartbeat: running threads [8]
+2022-05-10T20:00:22Z p-18 t-gpz3pfjjs DEBUG: Heartbeat: running threads [8]
+2022-05-10T20:00:52Z p-18 t-gpz3pfjjs DEBUG: Heartbeat: running threads [8]
+2022-05-10T20:01:22Z p-18 t-gpz3pfjjs DEBUG: Heartbeat: running threads [8]
+2022-05-10T20:01:45Z p-18 t-gpz4670js DEBUG: [worker-ping.sent:1:un6eii][#<Thread:0x000055cec7d98910@/usr/local/bundle/gems/bunny-2.19.0/lib/bunny/consumer_work_pool.rb:101 run>][ping.sent][#<Sneakers::Configuration:0x000055cec7e03418>] Working off: "\"ack?\""
+2022-05-10T20:01:52Z p-18 t-gpz3pfjjs DEBUG: Heartbeat: running threads [9]
+2022-05-10T20:02:00Z p-18 t-gpz3pfjjs DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:02:00Z p-18 t-gpz46bl8o INFO: Shutting down workers
+2022-05-10T20:02:00Z p-18 t-gpz46bl8o DEBUG: [worker-ping.sent:1:un6eii][#<ServerEngine::SignalThread:0x000055cec7e00c90@/usr/local/bundle/gems/serverengine-2.0.7/lib/serverengine/signal_thread.rb:80 run>][ping.sent][#<Sneakers::Configuration:0x000055cec7e03418>] Stopping worker: unsubscribing.
+2022-05-10T20:02:00Z p-18 t-gpz46bl8o INFO: Queue: will try to cancel consumer #<Bunny::Consumer:47173302273440 @channel_id=1 @queue=ping.sent> @consumer_tag=bunny-1652212612000-164235986241 @exclusive= @no_ack=false>
+2022-05-10T20:02:00Z p-18 t-gpz46bl8o INFO: Queue: consumer bunny-1652212612000-164235986241 cancelled
+2022-05-10T20:02:00Z p-18 t-gpz46bl8o DEBUG: [worker-ping.sent:1:un6eii][#<ServerEngine::SignalThread:0x000055cec7e00c90@/usr/local/bundle/gems/serverengine-2.0.7/lib/serverengine/signal_thread.rb:80 run>][ping.sent][#<Sneakers::Configuration:0x000055cec7e03418>] Stopping worker: shutting down thread pool.
+2022-05-10T20:02:00Z p-1 t-gpz46bnzk INFO: Received graceful stop
+2022-05-10T20:02:00Z p-18 t-gpz46bl8o DEBUG: [worker-ping.sent:1:un6eii][#<ServerEngine::SignalThread:0x000055cec7e00c90@/usr/local/bundle/gems/serverengine-2.0.7/lib/serverengine/signal_thread.rb:80 run>][ping.sent][#<Sneakers::Configuration:0x000055cec7e03418>] Stopping worker: I'm gone.
+2022-05-10T20:02:00Z p-1 t-gpz3pfjjs INFO: Worker 0 finished with status 0
+2022-05-10T20:03:00Z p-1 t-gmwpbt3gg WARN: Loading runner configuration...
+2022-05-10T20:03:00Z p-1 t-gmwpbt3gg DEBUG: New configuration: #<Sneakers::Configuration:0x0000555edf0019d0 @hash={:error_reporters=>[#<Sneakers::ErrorReporter::DefaultLogger:0x0000555edf3de0f8>], :runner_config_file=>nil, :metrics=>nil, :daemonize=>false, :start_worker_delay=>0.2, :workers=>1, :log=>#<IO:<STDOUT>>, :pid_path=>"sneakers.pid", :amqp_heartbeat=>30, :prefetch=>10, :threads=>10, :share_threads=>false, :ack=>true, :hooks=>{}, :exchange=>"sneakers", :exchange_options=>{:type=>:direct, :durable=>true, :auto_delete=>false, :arguments=>{}}, :queue_options=>{:durable=>true, :auto_delete=>false, :exclusive=>false, :arguments=>{}}, :connection=>#<Bunny::Session:0x555ede3fe1d8 guest@rabbitmq:5672, vhost=/, addresses=[rabbitmq:5672]>, :handler=>Sneakers::Handlers::Oneshot, :logger=>#<ServerEngine::DaemonLogger:0x0000555ede3baaa0 @rotate_age=5, @rotate_size=1048576, @file_dev=#<Logger::LogDevice:0x0000555ede3b9b28 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000555ede3b99e8>>, @level=0, @progname=nil, @default_formatter=#<Logger::Formatter:0x0000555ede3ba118 @datetime_format=nil>, @formatter=Sneakers::Support::ProductionFormatter, @logdev=#<Logger::LogDevice:0x0000555ede3b9b28 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000555ede3b99e8>>>, :log_level=>0, :worker_type=>"process", :worker_classes=>[PongSubscriber], :log_stdout=>false, :log_stderr=>false}>
+2022-05-10T20:03:00Z p-1 t-gmwpbt3gg WARN: Loading runner configuration...
+2022-05-10T20:03:00Z p-1 t-gmwpbt3gg DEBUG: New configuration: #<Sneakers::Configuration:0x0000555edf01e738 @hash={:error_reporters=>[#<Sneakers::ErrorReporter::DefaultLogger:0x0000555edf3de0f8>], :runner_config_file=>nil, :metrics=>nil, :daemonize=>false, :start_worker_delay=>0.2, :workers=>1, :log=>#<IO:<STDOUT>>, :pid_path=>"sneakers.pid", :amqp_heartbeat=>30, :prefetch=>10, :threads=>10, :share_threads=>false, :ack=>true, :hooks=>{}, :exchange=>"sneakers", :exchange_options=>{:type=>:direct, :durable=>true, :auto_delete=>false, :arguments=>{}}, :queue_options=>{:durable=>true, :auto_delete=>false, :exclusive=>false, :arguments=>{}}, :connection=>#<Bunny::Session:0x555ede3fe1d8 guest@rabbitmq:5672, vhost=/, addresses=[rabbitmq:5672]>, :handler=>Sneakers::Handlers::Oneshot, :logger=>#<ServerEngine::DaemonLogger:0x0000555ede3baaa0 @rotate_age=5, @rotate_size=1048576, @file_dev=#<Logger::LogDevice:0x0000555ede3b9b28 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000555ede3b99e8>>, @level=0, @progname=nil, @default_formatter=#<Logger::Formatter:0x0000555ede3ba118 @datetime_format=nil>, @formatter=Sneakers::Support::ProductionFormatter, @logdev=#<Logger::LogDevice:0x0000555ede3b9b28 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000555ede3b99e8>>>, :log_level=>0, :worker_type=>"process", :worker_classes=>[PongSubscriber], :log_stdout=>false, :log_stderr=>false}>
+2022-05-10T20:03:00Z p-1 t-gmwpbt3gg WARN: Loading runner configuration...
+2022-05-10T20:03:00Z p-1 t-gmwpbt3gg DEBUG: New configuration: #<Sneakers::Configuration:0x0000555edf09fbd0 @hash={:error_reporters=>[#<Sneakers::ErrorReporter::DefaultLogger:0x0000555edf3de0f8>], :runner_config_file=>nil, :metrics=>nil, :daemonize=>false, :start_worker_delay=>0.2, :workers=>1, :log=>#<IO:<STDOUT>>, :pid_path=>"sneakers.pid", :amqp_heartbeat=>30, :prefetch=>10, :threads=>10, :share_threads=>false, :ack=>true, :hooks=>{}, :exchange=>"sneakers", :exchange_options=>{:type=>:direct, :durable=>true, :auto_delete=>false, :arguments=>{}}, :queue_options=>{:durable=>true, :auto_delete=>false, :exclusive=>false, :arguments=>{}}, :connection=>#<Bunny::Session:0x555ede3fe1d8 guest@rabbitmq:5672, vhost=/, addresses=[rabbitmq:5672]>, :handler=>Sneakers::Handlers::Oneshot, :logger=>#<ServerEngine::DaemonLogger:0x0000555ede3baaa0 @rotate_age=5, @rotate_size=1048576, @file_dev=#<Logger::LogDevice:0x0000555ede3b9b28 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000555ede3b99e8>>, @level=0, @progname=nil, @default_formatter=#<Logger::Formatter:0x0000555ede3ba118 @datetime_format=nil>, @formatter=Sneakers::Support::ProductionFormatter, @logdev=#<Logger::LogDevice:0x0000555ede3b9b28 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000555ede3b99e8>>>, :log_level=>0, :worker_type=>"process", :worker_classes=>[PongSubscriber], :log_stdout=>false, :log_stderr=>false}>
+2022-05-10T20:03:00Z p-17 t-gmwpbt3gg DEBUG: [worker-ping.sent:1:v9wat7][#<Thread:0x0000555edca84b80 run>][ping.sent][#<Sneakers::Configuration:0x0000555edf01ba60>] New worker: subscribing.
+2022-05-10T20:03:00Z p-17 t-gmwpn90x0 DEBUG: [worker-ping.sent:1:v9wat7][#<Thread:0x0000555edef2cfc8@/usr/local/bundle/gems/bunny-2.19.0/lib/bunny/consumer_work_pool.rb:101 run>][ping.sent][#<Sneakers::Configuration:0x0000555edf01ba60>] Working off: "\"foi??\""
+2022-05-10T20:03:00Z p-17 t-gmwpn90x0 DEBUG: [worker-ping.sent:1:v9wat7][#<Thread:0x0000555edef2cfc8@/usr/local/bundle/gems/bunny-2.19.0/lib/bunny/consumer_work_pool.rb:101 run>][ping.sent][#<Sneakers::Configuration:0x0000555edf01ba60>] Working off: "\"*-*\""
+2022-05-10T20:03:00Z p-17 t-gmwpn90x0 DEBUG: [worker-ping.sent:1:v9wat7][#<Thread:0x0000555edef2cfc8@/usr/local/bundle/gems/bunny-2.19.0/lib/bunny/consumer_work_pool.rb:101 run>][ping.sent][#<Sneakers::Configuration:0x0000555edf01ba60>] Working off: "\"ack?\""
+2022-05-10T20:03:00Z p-17 t-gmwpn90x0 DEBUG: [worker-ping.sent:1:v9wat7][#<Thread:0x0000555edef2cfc8@/usr/local/bundle/gems/bunny-2.19.0/lib/bunny/consumer_work_pool.rb:101 run>][ping.sent][#<Sneakers::Configuration:0x0000555edf01ba60>] Working off: "\"ack?\""
+2022-05-10T20:03:00Z p-17 t-gmwpbt3gg DEBUG: [worker-ping.sent:1:v9wat7][#<Thread:0x0000555edca84b80 run>][ping.sent][#<Sneakers::Configuration:0x0000555edf01ba60>] New worker: I'm alive.
+2022-05-10T20:03:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:04:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:04:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:05:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:05:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:06:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:06:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:07:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:07:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:08:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:08:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:09:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:09:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:10:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:10:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:11:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:11:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:12:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:12:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:13:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:13:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:14:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:14:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:15:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:15:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:16:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:16:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:17:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:17:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:18:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:18:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:19:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:19:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:20:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:20:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:21:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:21:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:22:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:22:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:23:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:23:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:24:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:24:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:25:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:25:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:26:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:26:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:27:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:27:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:28:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:28:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:29:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:29:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:30:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:30:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:31:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:31:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:32:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:32:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:33:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:33:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:34:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:34:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:35:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:35:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:36:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:36:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:37:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:37:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:38:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:38:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:39:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:39:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:40:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:40:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:41:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:41:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:42:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:42:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:43:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:43:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:44:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:44:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:45:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:45:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:46:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:46:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:47:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:47:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:48:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:48:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:49:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:49:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:50:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:50:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:51:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:51:30Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-10T20:52:00Z p-17 t-gmwpbt3gg DEBUG: Heartbeat: running threads [10]
+2022-05-11T13:19:53Z p-1 t-gtl5mh9ro WARN: Loading runner configuration...
+2022-05-11T13:19:53Z p-1 t-gtl5mh9ro DEBUG: New configuration: #<Sneakers::Configuration:0x000056529ab71040 @hash={:error_reporters=>[#<Sneakers::ErrorReporter::DefaultLogger:0x000056529af30e38>], :runner_config_file=>nil, :metrics=>nil, :daemonize=>false, :start_worker_delay=>0.2, :workers=>1, :log=>#<IO:<STDOUT>>, :pid_path=>"sneakers.pid", :amqp_heartbeat=>30, :prefetch=>10, :threads=>10, :share_threads=>false, :ack=>true, :hooks=>{}, :exchange=>"sneakers", :exchange_options=>{:type=>:direct, :durable=>true, :auto_delete=>false, :arguments=>{}}, :queue_options=>{:durable=>true, :auto_delete=>false, :exclusive=>false, :arguments=>{}}, :connection=>#<Bunny::Session:0x565299f4bcc0 guest@rabbitmq:5672, vhost=/, addresses=[rabbitmq:5672]>, :handler=>Sneakers::Handlers::Oneshot, :logger=>#<ServerEngine::DaemonLogger:0x0000565299ef7260 @rotate_age=5, @rotate_size=1048576, @file_dev=#<Logger::LogDevice:0x0000565299ef6040 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000565299ef5f78>>, @level=0, @progname=nil, @default_formatter=#<Logger::Formatter:0x0000565299ef68d8 @datetime_format=nil>, @formatter=Sneakers::Support::ProductionFormatter, @logdev=#<Logger::LogDevice:0x0000565299ef6040 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000565299ef5f78>>>, :log_level=>0, :worker_type=>"process", :worker_classes=>[PongSubscriber], :log_stdout=>false, :log_stderr=>false}>
+2022-05-11T13:19:53Z p-1 t-gtl5mh9ro WARN: Loading runner configuration...
+2022-05-11T13:19:53Z p-1 t-gtl5mh9ro DEBUG: New configuration: #<Sneakers::Configuration:0x000056529ab2ed08 @hash={:error_reporters=>[#<Sneakers::ErrorReporter::DefaultLogger:0x000056529af30e38>], :runner_config_file=>nil, :metrics=>nil, :daemonize=>false, :start_worker_delay=>0.2, :workers=>1, :log=>#<IO:<STDOUT>>, :pid_path=>"sneakers.pid", :amqp_heartbeat=>30, :prefetch=>10, :threads=>10, :share_threads=>false, :ack=>true, :hooks=>{}, :exchange=>"sneakers", :exchange_options=>{:type=>:direct, :durable=>true, :auto_delete=>false, :arguments=>{}}, :queue_options=>{:durable=>true, :auto_delete=>false, :exclusive=>false, :arguments=>{}}, :connection=>#<Bunny::Session:0x565299f4bcc0 guest@rabbitmq:5672, vhost=/, addresses=[rabbitmq:5672]>, :handler=>Sneakers::Handlers::Oneshot, :logger=>#<ServerEngine::DaemonLogger:0x0000565299ef7260 @rotate_age=5, @rotate_size=1048576, @file_dev=#<Logger::LogDevice:0x0000565299ef6040 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000565299ef5f78>>, @level=0, @progname=nil, @default_formatter=#<Logger::Formatter:0x0000565299ef68d8 @datetime_format=nil>, @formatter=Sneakers::Support::ProductionFormatter, @logdev=#<Logger::LogDevice:0x0000565299ef6040 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000565299ef5f78>>>, :log_level=>0, :worker_type=>"process", :worker_classes=>[PongSubscriber], :log_stdout=>false, :log_stderr=>false}>
+2022-05-11T13:19:53Z p-1 t-gtl5mh9ro WARN: Loading runner configuration...
+2022-05-11T13:19:53Z p-1 t-gtl5mh9ro DEBUG: New configuration: #<Sneakers::Configuration:0x000056529aaef428 @hash={:error_reporters=>[#<Sneakers::ErrorReporter::DefaultLogger:0x000056529af30e38>], :runner_config_file=>nil, :metrics=>nil, :daemonize=>false, :start_worker_delay=>0.2, :workers=>1, :log=>#<IO:<STDOUT>>, :pid_path=>"sneakers.pid", :amqp_heartbeat=>30, :prefetch=>10, :threads=>10, :share_threads=>false, :ack=>true, :hooks=>{}, :exchange=>"sneakers", :exchange_options=>{:type=>:direct, :durable=>true, :auto_delete=>false, :arguments=>{}}, :queue_options=>{:durable=>true, :auto_delete=>false, :exclusive=>false, :arguments=>{}}, :connection=>#<Bunny::Session:0x565299f4bcc0 guest@rabbitmq:5672, vhost=/, addresses=[rabbitmq:5672]>, :handler=>Sneakers::Handlers::Oneshot, :logger=>#<ServerEngine::DaemonLogger:0x0000565299ef7260 @rotate_age=5, @rotate_size=1048576, @file_dev=#<Logger::LogDevice:0x0000565299ef6040 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000565299ef5f78>>, @level=0, @progname=nil, @default_formatter=#<Logger::Formatter:0x0000565299ef68d8 @datetime_format=nil>, @formatter=Sneakers::Support::ProductionFormatter, @logdev=#<Logger::LogDevice:0x0000565299ef6040 @shift_period_suffix="%Y%m%d", @shift_size=1048576, @shift_age=5, @filename="sneakers.log", @dev=#<File:sneakers.log>, @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x0000565299ef5f78>>>, :log_level=>0, :worker_type=>"process", :worker_classes=>[PongSubscriber], :log_stdout=>false, :log_stderr=>false}>
+2022-05-11T13:19:53Z p-17 t-gtl5mh9ro DEBUG: [worker-ping.sent:1:nh9e3p][#<Thread:0x00005652985dcb68 run>][ping.sent][#<Sneakers::Configuration:0x000056529aad5640>] New worker: subscribing.
+2022-05-11T13:19:53Z p-17 t-gtl5xqk7s DEBUG: [worker-ping.sent:1:nh9e3p][#<Thread:0x000056529a9edbb0@/usr/local/bundle/gems/bunny-2.19.0/lib/bunny/consumer_work_pool.rb:101 run>][ping.sent][#<Sneakers::Configuration:0x000056529aad5640>] Working off: "\"buenos dias!\""
+2022-05-11T13:19:53Z p-17 t-gtl5mh9ro DEBUG: [worker-ping.sent:1:nh9e3p][#<Thread:0x00005652985dcb68 run>][ping.sent][#<Sneakers::Configuration:0x000056529aad5640>] New worker: I'm alive.
+2022-05-11T13:20:02Z p-17 t-gtl5xqk7s DEBUG: [worker-ping.sent:1:nh9e3p][#<Thread:0x000056529a9edbb0@/usr/local/bundle/gems/bunny-2.19.0/lib/bunny/consumer_work_pool.rb:101 run>][ping.sent][#<Sneakers::Configuration:0x000056529aad5640>] Working off: "\"tudo tranqui?\""
+2022-05-11T13:20:10Z p-1 t-gtl5y13pg INFO: Received graceful stop
+2022-05-11T13:20:10Z p-17 t-gtl5mh9ro DEBUG: Heartbeat: running threads [9]
+2022-05-11T13:20:10Z p-17 t-gtl5xyagg INFO: Shutting down workers
+2022-05-11T13:20:10Z p-17 t-gtl5xyagg DEBUG: [worker-ping.sent:1:nh9e3p][#<ServerEngine::SignalThread:0x000056529aa9dce0@/usr/local/bundle/gems/serverengine-2.0.7/lib/serverengine/signal_thread.rb:80 run>][ping.sent][#<Sneakers::Configuration:0x000056529aad5640>] Stopping worker: unsubscribing.
+2022-05-11T13:20:10Z p-17 t-gtl5xyagg INFO: Queue: will try to cancel consumer #<Bunny::Consumer:47456390704980 @channel_id=1 @queue=ping.sent> @consumer_tag=bunny-1652275193000-427652693195 @exclusive= @no_ack=false>
+2022-05-11T13:20:10Z p-17 t-gtl5xyagg INFO: Queue: consumer bunny-1652275193000-427652693195 cancelled
+2022-05-11T13:20:10Z p-17 t-gtl5xyagg DEBUG: [worker-ping.sent:1:nh9e3p][#<ServerEngine::SignalThread:0x000056529aa9dce0@/usr/local/bundle/gems/serverengine-2.0.7/lib/serverengine/signal_thread.rb:80 run>][ping.sent][#<Sneakers::Configuration:0x000056529aad5640>] Stopping worker: shutting down thread pool.
+2022-05-11T13:20:10Z p-17 t-gtl5xyagg DEBUG: [worker-ping.sent:1:nh9e3p][#<ServerEngine::SignalThread:0x000056529aa9dce0@/usr/local/bundle/gems/serverengine-2.0.7/lib/serverengine/signal_thread.rb:80 run>][ping.sent][#<Sneakers::Configuration:0x000056529aad5640>] Stopping worker: I'm gone.
+2022-05-11T13:20:10Z p-1 t-gtl5mh9ro INFO: Worker 0 finished with status 0
